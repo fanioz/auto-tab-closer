@@ -3,16 +3,19 @@ const SWEEP_ALARM_NAME = 'auto-tab-closer-sweep';
 const SWEEP_INTERVAL_MINUTES = 5;
 
 chrome.runtime.onInstalled.addListener(async (details) => {
-  if (details.reason === 'install') {
-    const data = await chrome.storage.sync.get(['thresholdHours', 'exceptions']);
-    if (data.thresholdHours === undefined) {
-      await chrome.storage.sync.set({ thresholdHours: DEFAULT_THRESHOLD_HOURS });
-    }
-    if (!data.exceptions) {
-      await chrome.storage.sync.set({ exceptions: [] });
-    }
+  const data = await chrome.storage.sync.get(['thresholdHours', 'exceptions']);
+  if (data.thresholdHours === undefined) {
+    await chrome.storage.sync.set({ thresholdHours: DEFAULT_THRESHOLD_HOURS });
+  }
+  if (!data.exceptions) {
+    await chrome.storage.sync.set({ exceptions: [] });
+  }
+  const local = await chrome.storage.local.get(['closedTabs', 'sessionClosedCount']);
+  if (local.closedTabs === undefined) {
     await chrome.storage.local.set({ closedTabs: [], sessionClosedCount: 0 });
+  }
 
+  if (details.reason === 'install') {
     chrome.notifications.create({
       type: 'basic',
       iconUrl: 'icon.png',
@@ -21,6 +24,12 @@ chrome.runtime.onInstalled.addListener(async (details) => {
     });
   }
 
+  chrome.alarms.create(SWEEP_ALARM_NAME, {
+    periodInMinutes: SWEEP_INTERVAL_MINUTES
+  });
+});
+
+chrome.runtime.onStartup.addListener(() => {
   chrome.alarms.create(SWEEP_ALARM_NAME, {
     periodInMinutes: SWEEP_INTERVAL_MINUTES
   });
