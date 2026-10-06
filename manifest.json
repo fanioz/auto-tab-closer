@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Tab Closer",
+  "version": "1.0.0",
+  "description": "Automatically closes idle tabs to free memory and preserve focus.",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": [
+    "tabs",
+    "alarms",
+    "storage",
+    "notifications"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}
