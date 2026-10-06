@@ -44,3 +44,7 @@ No network requests, no analytics, no remote code. All data lives in Chrome stor
 ## Post-MVP ideas
 
 Per-domain thresholds, URL-pattern exceptions, pre-close warnings, a manual "sweep now" button, context-menu exempting, Firefox support.
+
+## License
+
+[MIT](LICENSE)
