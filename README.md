@@ -1,4 +1,4 @@
-# Tab Janitor — Auto Close Idle Tabs
+# Tab Custodian — Auto Close Idle Tabs
 
 A Chrome/Edge extension (Manifest V3) that silently closes idle tabs — tabs you opened, forgot about, and never returned to — to free memory and keep your browsing focused. Everything it closes is restorable. Formerly "Auto Tab Closer".
 
