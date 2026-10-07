@@ -132,6 +132,33 @@
     .tag-remove:hover {
       color: #ef4444;
     }
+    .toggle-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      cursor: pointer;
+    }
+    .toggle-row input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      accent-color: var(--primary);
+      flex-shrink: 0;
+    }
+    .toggle-text {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .toggle-text strong {
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .toggle-text small {
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
     .status-msg {
       font-size: 12px;
       color: #10b981;
@@ -161,9 +188,20 @@
           <input type="range" id="threshold-slider" min="1" max="168" value="24">
         </div>
         <div style="font-size: 11px; color: var(--text-muted);">
-          Range: 1 hour up to 168 hours (7 days). Pinned and audible tabs are never closed.
+          Range: 1 hour up to 168 hours (7 days). Audible tabs are never closed; pinned tabs are protected by default (see Safety).
         </div>
       </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Safety</div>
+      <label class="toggle-row">
+        <input type="checkbox" id="protect-pinned" checked>
+        <span class="toggle-text">
+          <strong>Protect pinned tabs</strong>
+          <small>Pinned tabs are never auto-closed. Turn off to let idle pinned tabs be closed too — pin means "keep this", so leave this on unless you really want the janitor to touch pins.</small>
+        </span>
+      </label>
     </div>
 
     <div class="card">

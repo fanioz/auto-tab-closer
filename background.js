@@ -42,14 +42,15 @@ chrome.alarms.onAlarm.addListener(async (alarm) => {
 });
 
 async function sweepIdleTabs() {
-  const settings = await chrome.storage.sync.get(['thresholdHours', 'exceptions']);
+  const settings = await chrome.storage.sync.get(['thresholdHours', 'exceptions', 'protectPinned']);
   const thresholdHours = settings.thresholdHours ?? DEFAULT_THRESHOLD_HOURS;
   const exceptions = settings.exceptions || [];
+  const protectPinned = settings.protectPinned !== false;
   const thresholdMs = thresholdHours * 3600 * 1000;
   const now = Date.now();
 
   const tabs = await chrome.tabs.query({});
-  const tabsToClose = [...collectIdleTabs(tabs, thresholdMs, now, exceptions)];
+  const tabsToClose = [...collectIdleTabs(tabs, thresholdMs, now, exceptions, protectPinned)];
   const newlyClosed = tabsToClose.map(tab => ({
     id: tab.id,
     title: tab.title || 'Untitled',
@@ -64,10 +65,10 @@ async function sweepIdleTabs() {
   }
 }
 
-function* collectIdleTabs(tabs, thresholdMs, now, exceptions) {
+function* collectIdleTabs(tabs, thresholdMs, now, exceptions, protectPinned) {
   for (const tab of tabs) {
     if (!tab.id) continue;
-    if (tab.pinned) continue;
+    if (tab.pinned && protectPinned) continue;
     if (tab.audible) continue;
     if (tab.active) continue;
     if (!tab.url || tab.url.startsWith('chrome://') || tab.url.startsWith('edge://') || tab.url.startsWith('about:')) continue;

@@ -5,7 +5,7 @@ A Chrome extension (Manifest V3) that silently closes idle tabs — tabs you ope
 ## How it works
 
 - Every 5 minutes, the extension checks all tabs. A tab is **idle** when it hasn't been accessed (`tabs.lastAccessed`) for longer than the threshold (default: 24 hours).
-- **Never closed**: pinned tabs, audible (playing media) tabs, the active tab, and domains on your exception list.
+- **Never closed**: audible (playing media) tabs, the active tab, and domains on your exception list. Pinned tabs are protected by default — there's a toggle in Options to let idle pinned tabs be closed too.
 - Closed tabs land in a **Recently Auto-Closed** log (last 100) in the popup with one-click **Restore**; they're also recoverable via `Ctrl+Shift+T` / `chrome://history`.
 - Badge shows how many tabs were auto-closed this session.
 
@@ -22,6 +22,7 @@ Also works in Edge/Brave and other Chromium browsers.
 Right-click the toolbar icon → **Options** (or the gear in the popup):
 
 - **Idle threshold**: slider from 1 hour to 7 days. Default 24 hours.
+- **Protect pinned tabs**: on by default. Turn off only if you want the janitor to close idle pinned tabs as well.
 - **Domain exceptions**: hostnames that are never auto-closed. You can also add the current site from the popup with **Exempt Current Domain**.
 
 Settings sync across your Chrome instances; the closed-tabs log stays local.

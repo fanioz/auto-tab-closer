@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
   const thresholdSlider = document.getElementById('threshold-slider');
   const thresholdVal = document.getElementById('threshold-val');
+  const protectPinnedCheckbox = document.getElementById('protect-pinned');
   const exceptionInput = document.getElementById('exception-input');
   const addExceptionBtn = document.getElementById('add-exception-btn');
   const exceptionsContainer = document.getElementById('exceptions-container');
@@ -9,11 +10,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   let currentExceptions = [];
 
-  const data = await chrome.storage.sync.get(['thresholdHours', 'exceptions']);
+  const data = await chrome.storage.sync.get(['thresholdHours', 'exceptions', 'protectPinned']);
   const hours = data.thresholdHours ?? 24;
   thresholdSlider.value = hours;
   updateThresholdLabel(hours);
   currentExceptions = data.exceptions || [];
+  protectPinnedCheckbox.checked = data.protectPinned !== false;
   renderExceptions();
 
   thresholdSlider.addEventListener('input', (e) => {
@@ -76,7 +78,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const thresholdHours = Number(thresholdSlider.value);
     await chrome.storage.sync.set({
       thresholdHours,
-      exceptions: currentExceptions
+      exceptions: currentExceptions,
+      protectPinned: protectPinnedCheckbox.checked
     });
 
     statusMsg.classList.add('show');
