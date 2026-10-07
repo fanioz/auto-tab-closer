@@ -16,12 +16,7 @@ chrome.runtime.onInstalled.addListener(async (details) => {
   }
 
   if (details.reason === 'install') {
-    chrome.notifications.create({
-      type: 'basic',
-      iconUrl: 'icon.png',
-      title: 'Auto Tab Closer Active',
-      message: `Tabs idle longer than ${DEFAULT_THRESHOLD_HOURS} hours will be automatically closed.`
-    });
+    chrome.runtime.openOptionsPage();
   }
 
   chrome.alarms.create(SWEEP_ALARM_NAME, {

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tab Janitor — store screenshot</title>
+<style>
+  body {
+    margin: 0; height: 100vh; overflow: hidden;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px;
+    background: radial-gradient(1400px 900px at 72% 18%, #312e81 0%, #18181b 55%, #09090b 100%);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  h1 { color: #f4f4f5; font-size: 48px; margin: 0; letter-spacing: -0.02em; }
+  p { color: #a1a1aa; font-size: 19px; margin: 0 0 8px; }
+  .frame {
+    width: 340px; height: 330px; border: 1px solid #3f3f46; border-radius: 14px;
+    box-shadow: 0 30px 80px rgba(0,0,0,.65); background: #09090b; overflow: hidden;
+  }
+  .frame iframe { width: 340px; height: 330px; border: 0; }
+</style>
+</head>
+<body>
+  <h1>Close the tabs you forgot about.</h1>
+  <p>Set a threshold — the janitor sweeps every 5 minutes. Everything restorable.</p>
+  <div class="frame"><iframe src="http://127.0.0.1:8741/popup.html"></iframe></div>
+</body>
+</html>

@@ -1,6 +1,6 @@
-# Auto Tab Closer
+# Tab Janitor — Auto Close Idle Tabs
 
-A Chrome extension (Manifest V3) that silently closes idle tabs — tabs you opened, forgot about, and never returned to — to free memory and keep your browsing focused. Everything it closes is restorable.
+A Chrome/Edge extension (Manifest V3) that silently closes idle tabs — tabs you opened, forgot about, and never returned to — to free memory and keep your browsing focused. Everything it closes is restorable. Formerly "Auto Tab Closer".
 
 ## How it works
 
@@ -40,7 +40,11 @@ Settings sync across your Chrome instances; the closed-tabs log stays local.
 
 ## Privacy
 
-No network requests, no analytics, no remote code. All data lives in Chrome storage on your machine.
+No network requests, no analytics, no remote code. All data lives in Chrome storage on your machine. See [PRIVACY.md](PRIVACY.md).
+
+## Publishing to the stores
+
+See [STORE_LISTING.md](STORE_LISTING.md) for the ready-to-paste listing, permission justifications, and the submission checklist for Chrome Web Store and Microsoft Edge Add-ons. Build the upload package with `./package.sh`.
 
 ## Post-MVP ideas
 

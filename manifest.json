@@ -1,18 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "Auto Tab Closer",
+  "name": "Tab Janitor — Auto Close Idle Tabs",
   "version": "1.0.0",
-  "description": "Automatically closes idle tabs to free memory and preserve focus.",
-  "icons": {
-    "16": "icon.png",
-    "48": "icon.png",
-    "128": "icon.png"
-  },
+  "description": "Automatically closes tabs you forgot about — frees memory, keeps you focused. Everything restorable.",
   "permissions": [
     "tabs",
     "alarms",
-    "storage",
-    "notifications"
+    "storage"
   ],
   "background": {
     "service_worker": "background.js"
@@ -24,6 +18,11 @@
       "48": "icon.png",
       "128": "icon.png"
     }
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
   },
   "options_ui": {
     "page": "options.html",
