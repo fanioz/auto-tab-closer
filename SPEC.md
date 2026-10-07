@@ -1,4 +1,4 @@
-# Specification: Auto Tab Closer (Chrome MV3 MVP)
+# Specification: Tutupen (Chrome MV3 MVP)
 
 ## Overview
 A Chrome extension that automatically closes idle tabs to free memory and preserve user focus, acting as a silent janitor with robust safety invariants and instant restorability.

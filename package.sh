@@ -3,7 +3,7 @@
 set -eu
 cd "$(dirname "$0")"
 VERSION=$(node -p "JSON.parse(require('fs').readFileSync('manifest.json','utf8')).version")
-OUT="dist/tab-custodian-${VERSION}.zip"
+OUT="dist/tutupen-${VERSION}.zip"
 mkdir -p dist
 rm -f "$OUT"
 zip -q "$OUT" manifest.json background.js popup.html popup.js options.html options.js icon.png

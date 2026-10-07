@@ -1,8 +1,8 @@
-# Privacy Policy — Tab Custodian
+# Privacy Policy — Tutupen
 
 _Last updated: October 7, 2026_
 
-Tab Custodian (formerly "Auto Tab Closer") is a browser extension that automatically closes tabs that have been idle for longer than a threshold you configure. **It does not collect, transmit, sell, or share any data.**
+Tutupen (formerly "Auto Tab Closer") is a browser extension that automatically closes tabs that have been idle for longer than a threshold you configure. **It does not collect, transmit, sell, or share any data.**
 
 ## What the extension stores
 

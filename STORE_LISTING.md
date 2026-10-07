@@ -1,6 +1,6 @@
-# Store Listing — Tab Custodian
+# Store Listing — Tutupen
 
-Ready-to-paste copy for both stores. Package: `dist/tab-custodian-<version>.zip` (build with `./package.sh`).
+Ready-to-paste copy for both stores. Package: `dist/tutupen-<version>.zip` (build with `./package.sh`).
 
 ---
 
@@ -8,7 +8,7 @@ Ready-to-paste copy for both stores. Package: `dist/tab-custodian-<version>.zip`
 
 | Field | Value |
 |---|---|
-| Name | `Tab Custodian — Auto Close Idle Tabs` |
+| Name | `Tutupen — Auto Close Idle Tabs` |
 | Version | `1.0.0` |
 | Language | English (add `id` locale later if wanted) |
 | Category | Productivity (Edge: "Productivity") |
@@ -25,7 +25,7 @@ Ready-to-paste copy for both stores. Package: `dist/tab-custodian-<version>.zip`
 
 > **You open tabs "for later". Later never comes. Meanwhile, they eat your RAM.**
 >
-> Tab Custodian is a silent janitor for your browser: every 5 minutes it checks your tabs and closes the ones you haven't touched for longer than your threshold — so your memory stays free and your tab strip stays sane.
+> Tutupen is a silent janitor for your browser: every 5 minutes it checks your tabs and closes the ones you haven't touched for longer than your threshold — so your memory stays free and your tab strip stays sane.
 >
 > ✨ **How it works**
 > • Set one threshold — from 1 hour up to 7 days (default: 24 hours)
@@ -78,11 +78,11 @@ Promo tiles (CWS 440×280, Edge 540×540 / 1400×560) are optional at submission
 ## Submission checklist
 
 ### You (HITL, ~20 min)
-1. **Edge (first)**: sign in at <https://partner.microsoft.com/dashboard/microsoftedge> with a Microsoft account → register as Edge developer (free) → "Create new extension" → upload `dist/tab-custodian-1.0.0.zip` → paste the listing above → upload store assets → submit. Privacy policy URL + support email required.
+1. **Edge (first)**: sign in at <https://partner.microsoft.com/dashboard/microsoftedge> with a Microsoft account → register as Edge developer (free) → "Create new extension" → upload `dist/tutupen-1.0.0.zip` → paste the listing above → upload store assets → submit. Privacy policy URL + support email required.
 2. **Chrome Web Store**: pay the one-time **$5** fee at <https://chrome.google.com/webstore/devconsole> → "New item" → upload the same zip → fill Privacy practices tab with the disclosures above (single purpose + three permission justifications) → submit.
 
 ### Me (done / on request)
-- [x] Package zip: `./package.sh` → `dist/tab-custodian-1.0.0.zip`
+- [x] Package zip: `./package.sh` → `dist/tutupen-1.0.0.zip`
 - [x] Privacy policy (`PRIVACY.md`)
 - [x] Listing copy + justifications (this file)
 - [ ] Screenshots (capture via browser when idle; then `sips` resize for Edge)
