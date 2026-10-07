@@ -6,6 +6,6 @@ VERSION=$(node -p "JSON.parse(require('fs').readFileSync('manifest.json','utf8')
 OUT="dist/tutupen-${VERSION}.zip"
 mkdir -p dist
 rm -f "$OUT"
-zip -q "$OUT" manifest.json background.js popup.html popup.js options.html options.js icon.png
+zip -q "$OUT" manifest.json background.js popup.html popup.js options.html options.js icons/tutupen-16.png icons/tutupen-32.png icons/tutupen-48.png icons/tutupen-128.png
 echo "Built ${OUT}:"
 unzip -l "$OUT"

@@ -70,8 +70,8 @@ Ready-to-paste copy for both stores. Package: `dist/tutupen-<version>.zip` (buil
 |---|---|---|---|
 | Screenshots | 1280×800 (max 5, PNG/JPEG) | CWS | `store-assets/screenshot-*.png` |
 | Screenshots | 1366×768 (max 5) | Edge | `store-assets/screenshot-edge-*.png` |
-| Store logo | 300×300 | Edge | `store-assets/logo-300.png` |
-| Icon | 128×128 | in package | `icon.png` |
+| Store logo | 300×300 | Edge | `store-assets/logo-300.png` (from `icons/tutupen-300.png`) |
+| Icon | 16/32/48/128 | in package | `icons/tutupen-*.png` |
 
 Promo tiles (CWS 440×280, Edge 540×540 / 1400×560) are optional at submission time; add later if the dashboard demands them.
 
