@@ -26,4 +26,4 @@ Uninstalling the extension removes all stored data automatically. You can also c
 
 ## Contact
 
-Open an issue at <https://github.com/fanioz/auto-tab-closer/issues> for any privacy question.
+Open an issue at <https://github.com/fanioz/tutupen/issues> for any privacy question.

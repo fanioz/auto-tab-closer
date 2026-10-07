@@ -61,8 +61,8 @@ Ready-to-paste copy for both stores. Package: `dist/tutupen-<version>.zip` (buil
 ## Data usage disclosures (CWS)
 
 - Does this item collect or use personal/sensitive user data? **No data is collected, transmitted, or sold.** Tab metadata is read and processed locally to decide which tabs to close, and stored locally (settings synced by the browser's own sync) only for the restore feature.
-- Privacy policy URL: `https://github.com/fanioz/auto-tab-closer/blob/main/PRIVACY.md`
-- Support: `https://github.com/fanioz/auto-tab-closer/issues` (+ developer email filled at registration)
+- Privacy policy URL: `https://github.com/fanioz/tutupen/blob/main/PRIVACY.md`
+- Support: `https://github.com/fanioz/tutupen/issues` (+ developer email filled at registration)
 
 ## Image assets
 
